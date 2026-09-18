@@ -14,21 +14,22 @@
             font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
             background-color: #0d0d0d;
             color: #f1f1f1;
-            display: flex;
-            justify-content: center;
-            align-items: center;
-            min-height: 100vh;
+            line-height: 1.6;
             padding: 20px;
         }
+        .container {
+            max-width: 800px;
+            margin: 0 auto;
+        }
+        /* Card / Section Styling */
         .card {
             background: linear-gradient(145deg, #1a1a1a, #121212);
             border: 1px solid #2a2a2a;
-            max-width: 700px;
-            width: 100%;
-            padding: 60px 40px;
+            padding: 50px 30px;
             border-radius: 20px;
             text-align: center;
             box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
+            margin-bottom: 30px;
         }
         .badge {
             display: inline-block;
@@ -45,28 +46,28 @@
         }
         h1 {
             color: #ffffff;
-            font-size: 42px;
+            font-size: 38px;
             font-weight: 800;
             margin-bottom: 20px;
-            line-height: 1.2;
         }
         h1 span {
             color: #d4af37;
         }
+        h2 {
+            color: #d4af37;
+            font-size: 24px;
+            margin-bottom: 15px;
+        }
         p {
             color: #9a9a9a;
-            font-size: 18px;
-            line-height: 1.6;
-            margin-bottom: 40px;
-            max-width: 550px;
-            margin-left: auto;
-            margin-right: auto;
+            font-size: 16px;
+            margin-bottom: 30px;
         }
         .btn {
             display: inline-block;
             background: #d4af37;
             color: #0d0d0d;
-            padding: 18px 45px;
+            padding: 16px 40px;
             font-size: 18px;
             font-weight: 700;
             text-decoration: none;
@@ -79,49 +80,84 @@
         .btn:hover {
             background: #e6c250;
             transform: translateY(-2px);
-            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
         }
-        .features {
-            display: flex;
-            justify-content: center;
-            gap: 30px;
-            margin-top: 45px;
-            border-top: 1px solid #222;
-            padding-top: 30px;
+        /* Sections Style */
+        .section-box {
+            background: #161616;
+            border: 1px solid #222;
+            padding: 30px;
+            border-radius: 15px;
+            margin-bottom: 25px;
+            text-align: left;
         }
-        .feature-item {
+        .section-box h3 {
+            color: #d4af37;
+            margin-bottom: 10px;
+            font-size: 20px;
+        }
+        .section-box p, .section-box li {
+            color: #b0b0b0;
+            font-size: 15px;
+        }
+        .section-box ul {
+            padding-left: 20px;
+        }
+        .section-box li {
+            margin-bottom: 8px;
+        }
+        .contact-info {
+            font-weight: bold;
+            color: #d4af37;
+        }
+        footer {
+            text-align: center;
+            color: #666;
             font-size: 14px;
-            color: #777;
-            font-weight: 500;
-        }
-        @media (max-width: 600px) {
-            .card {
-                padding: 40px 20px;
-            }
-            h1 {
-                font-size: 32px;
-            }
-            .features {
-                flex-direction: column;
-                gap: 10px;
-            }
+            margin-top: 40px;
+            padding-bottom: 20px;
         }
     </style>
 </head>
 <body>
 
-    <div class="card">
-        <div class="badge">Powered by Artificial Intelligence</div>
-        <h1>Transform Your Ingredients Into <span>Masterpieces</span></h1>
-        <p>Instantly generate delicious recipes using whatever ingredients you have left in your kitchen. Smart, fast, and tailored just for you.</p>
+    <div class="container">
         
-        <a href="https://master-chef-ai-kbrf3jygrejs8pwqp2fe6s.streamlit.app/" target="_blank" class="btn">Launch Master Chef AI</a>
-
-        <div class="features">
-            <div class="feature-item">⚡ Instant Generation</div>
-            <div class="feature-item">🍳 Smart AI Chef</div>
-            <div class="feature-item">🌍 Global Recipes</div>
+        <!-- Hero Section -->
+        <div class="card">
+            <div class="badge">Powered by Artificial Intelligence</div>
+            <h1>Transform Your Ingredients Into <span>Masterpieces</span></h1>
+            <p>Instantly generate delicious recipes using whatever ingredients you have left in your kitchen. Smart, fast, and tailored just for you.</p>
+            
+            <a href="https://master-chef-ai-kbrf3jygrejs8pwqp2fe6s.streamlit.app/" target="_blank" class="btn">Launch Master Chef AI</a>
         </div>
+
+        <!-- How It Works Section -->
+        <div class="section-box">
+            <h3>⚙️ How It Works</h3>
+            <ul>
+                <li><strong>Step 1:</strong> Enter the list of available ingredients or leftovers you have in your kitchen.</li>
+                <li><strong>Step 2:</strong> Click on the launch button to open our smart AI application.</li>
+                <li><strong>Step 3:</strong> Get instant, step-by-step gourmet recipes customized according to your taste!</li>
+            </ul>
+        </div>
+
+        <!-- About Us Section -->
+        <div class="section-box">
+            <h3>📖 About Us</h3>
+            <p>Master Chef AI is an advanced cooking assistant application designed to reduce food waste and inspire creative cooking. Powered by modern artificial intelligence, our tool helps home cooks around the world whip up delicious meals using everyday ingredients. You can directly access our core web application hosted on our <a href="https://master-chef-ai-kbrf3jygrejs8pwqp2fe6s.streamlit.app/" target="_blank" style="color: #d4af37;">Streamlit Platform</a>.</p>
+        </div>
+
+        <!-- Contact Us Section -->
+        <div class="section-box">
+            <h3>📞 Contact Us</h3>
+            <p>Have questions, feedback, or need assistance? Reach out to us directly:</p>
+            <p>Phone / WhatsApp: <span class="contact-info">00923046267846</span></p>
+        </div>
+
+        <footer>
+            &copy; 2026 Master Chef AI. All rights reserved.
+        </div>
+
     </div>
 
 </body>
