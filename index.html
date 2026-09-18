@@ -3,98 +3,125 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Master Chef AI - Smart Recipe Generator</title>
+    <title>Master Chef AI - Smart AI Recipe Generator</title>
     <style>
-        /* Body: Dark Black Background */
-        body {
-            font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
-            text-align: center;
-            background-color: #121212; /* Gehra Kala */
-            color: #e0e0e0; /* Light Gray Text */
-            padding: 80px 20px;
+        * {
+            box-sizing: border-box;
             margin: 0;
+            padding: 0;
+        }
+        body {
+            font-family: 'Inter', -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, sans-serif;
+            background-color: #0d0d0d;
+            color: #f1f1f1;
             display: flex;
             justify-content: center;
             align-items: center;
             min-height: 100vh;
+            padding: 20px;
         }
-
-        /* Container: Slightly Lighter Dark Gray */
-        .container {
-            max-width: 650px;
-            background: #1e1e1e; /* Thora sa light kala */
-            padding: 50px;
-            border-radius: 15px;
-            box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.5); /* Shadow for depth */
-            border: 1px solid #333;
+        .card {
+            background: linear-gradient(145deg, #1a1a1a, #121212);
+            border: 1px solid #2a2a2a;
+            max-width: 700px;
+            width: 100%;
+            padding: 60px 40px;
+            border-radius: 20px;
+            text-align: center;
+            box-shadow: 0 15px 35px rgba(0, 0, 0, 0.6);
         }
-
-        /* Heading: Elegant Golden Color */
-        h1 {
-            color: #d4af37; /* Sunehri (Golden) */
-            font-size: 42px;
-            margin-bottom: 20px;
+        .badge {
+            display: inline-block;
+            background: rgba(212, 175, 55, 0.1);
+            color: #d4af37;
+            padding: 6px 16px;
+            font-size: 14px;
+            font-weight: 600;
+            border-radius: 30px;
+            margin-bottom: 25px;
+            border: 1px solid rgba(212, 175, 55, 0.2);
             text-transform: uppercase;
             letter-spacing: 1px;
         }
-
-        /* Paragraph Text */
-        p {
-            color: #b0b0b0; /* Medium Gray Text */
-            font-size: 20px;
-            line-height: 1.6;
-            margin-bottom: 35px;
+        h1 {
+            color: #ffffff;
+            font-size: 42px;
+            font-weight: 800;
+            margin-bottom: 20px;
+            line-height: 1.2;
         }
-
-        /* Button: Golden Background with Dark Text */
+        h1 span {
+            color: #d4af37;
+        }
+        p {
+            color: #9a9a9a;
+            font-size: 18px;
+            line-height: 1.6;
+            margin-bottom: 40px;
+            max-width: 550px;
+            margin-left: auto;
+            margin-right: auto;
+        }
         .btn {
             display: inline-block;
-            background-color: #d4af37; /* Sunehri (Golden) */
-            color: #121212; /* Kala Text */
-            padding: 18px 40px;
+            background: #d4af37;
+            color: #0d0d0d;
+            padding: 18px 45px;
+            font-size: 18px;
+            font-weight: 700;
             text-decoration: none;
-            font-size: 22px;
-            font-weight: bold;
-            border-radius: 50px; /* Fully rounded button */
-            transition: all 0.4s ease;
+            border-radius: 12px;
+            transition: all 0.3s ease;
+            box-shadow: 0 8px 25px rgba(212, 175, 55, 0.3);
             text-transform: uppercase;
-            letter-spacing: 1.5px;
-            box-shadow: 0px 4px 15px rgba(212, 175, 55, 0.3);
+            letter-spacing: 1px;
         }
-
-        /* Button Hover Effect */
         .btn:hover {
-            background-color: #e6c250; /* Thora zyada chamakdar golden */
-            transform: translateY(-3px); /* Upar uthta hua effect */
-            box-shadow: 0px 6px 20px rgba(212, 175, 55, 0.5);
+            background: #e6c250;
+            transform: translateY(-2px);
+            box-shadow: 0 12px 30px rgba(212, 175, 55, 0.5);
         }
-
-        /* Responsive Mobile Design */
+        .features {
+            display: flex;
+            justify-content: center;
+            gap: 30px;
+            margin-top: 45px;
+            border-top: 1px solid #222;
+            padding-top: 30px;
+        }
+        .feature-item {
+            font-size: 14px;
+            color: #777;
+            font-weight: 500;
+        }
         @media (max-width: 600px) {
-            .container {
-                padding: 30px;
+            .card {
+                padding: 40px 20px;
             }
             h1 {
                 font-size: 32px;
             }
-            p {
-                font-size: 18px;
-            }
-            .btn {
-                font-size: 18px;
-                padding: 15px 30px;
+            .features {
+                flex-direction: column;
+                gap: 10px;
             }
         }
     </style>
 </head>
 <body>
 
-    <div class="container">
-        <h1>Master Chef AI 🍳</h1>
-        <p>Apne ghar ke bache hue ingredients se duniya ki sab se behtareen recipes tayaar karein sirf aik click par! Apne AI Chef se baat karein aur naye pakwan banayein.</p>
+    <div class="card">
+        <div class="badge">Powered by Artificial Intelligence</div>
+        <h1>Transform Your Ingredients Into <span>Masterpieces</span></h1>
+        <p>Instantly generate delicious recipes using whatever ingredients you have left in your kitchen. Smart, fast, and tailored just for you.</p>
         
-        <!-- Golden Button with your Streamlit Link -->
         <a href="https://master-chef-ai-kbrf3jygrejs8pwqp2fe6s.streamlit.app/" target="_blank" class="btn">Launch Master Chef AI</a>
+
+        <div class="features">
+            <div class="feature-item">⚡ Instant Generation</div>
+            <div class="feature-item">🍳 Smart AI Chef</div>
+            <div class="feature-item">🌍 Global Recipes</div>
+        </div>
     </div>
 
 </body>
